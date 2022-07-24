@@ -5,10 +5,11 @@
 
 .wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1.5fr 1fr;
     grid-template-rows: 115px minmax(600px, 1fr) 115px;
     grid-row-gap: 30px    
 }
+
 
 body {
    
@@ -52,7 +53,6 @@ a:active { text-decoration: none }
 #rightHand{
     grid-column: 3;
     text-align: right;
-    
 }
 
 
