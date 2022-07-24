@@ -6,7 +6,8 @@
 .wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 115px minmax(800px, 1fr) 115px;
+    grid-template-rows: 115px minmax(600px, 1fr) 115px;
+    
 }
 
 
@@ -17,35 +18,54 @@ body {
     color: white;
 }
 
+a:link { text-decoration: none }
+a:visited { text-decoration: none }
+a:hover { text-decoration: none }
+a:active { text-decoration: none }
 
-.header {
+/* Header stuff */
+.headBanner {
     grid-row: 1;
-    grid-column: 1 / 4;
     background-color: #222222;
     margin-left: -15px;
     margin-right: -15px;
     padding: 15px;
-    color: white;
 }
 
-#title {
-    grid-row: 1;
-    grid-column: 1; !important;
-    text-align: left;
+#leftHand {
+    grid-column: 1;
 }
-#test{
-    grid-row: 1;
-    grid-column: 4; !important;
+#middle{
+    grid-column: 2;
+}
+#logo{
+    display: block;
+    margin: auto;
+    width: 50%;
+    max-height: 120px;
+    max-width: 120px;
+    border-style: solid;
+    border-width: 10px;
+    border-color: #222222;
+    border-radius: 50%;
+    justify-content: center;
+}
+#rightHand{
+    grid-column: 3;
     text-align: right;
+    
 }
 
+
+/* Body stuff */
 .content {
-    grid-row: 2;
+    grid-row: 2 / 3;
     grid-column: 1 / 4;
 }
 
+/* Footer stuff */
 .footer{
-    grid-row: 3;
+    grid-row: 4;
     grid-column: 1 / 4;
     background-color: #222222;
     margin-left: -15px;
