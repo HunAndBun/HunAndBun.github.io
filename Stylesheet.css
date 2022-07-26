@@ -6,13 +6,17 @@
     overflow-x: hidden;
 }
 
+html, body{
+    height: 100%;
+}
+
 
 /* Full page grid wrapper */
 .wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 75px minmax(500px, 1fr) 115px;
-    grid-row-gap: 60px    
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    row-gap: 50px;
 }
 
     /* Gets rid of old-fashioned underlining on links */
@@ -37,10 +41,11 @@
     
     header {
         /* Header-scoped wrapper */
-        display: grid;
-        grid-template-columns: 1fr 1.5fr 1fr;
-        grid-template-rows: 1fr;
-        grid-row-gap: 30px;
+        display: flex;
+        flex-direction: row;
+        flex: initial initial;
+        justify-content: space-between;
+        align-items: center;
         
         /* stylization */
         background-color: #222222;
@@ -49,17 +54,14 @@
         margin-right: -15px;
         padding: 15px 15px 15px 15px;
     }
-    
-        .headerComponent {
-            grid-row: 1;
-        }
         
         #leftHand {
-            grid-column: 1;
+            flex: 1;
+            margin-right: auto;
             text-align: left;
         }
         #middle{
-            grid-column: 2;
+            flex-grow: 2;
         }
         #logo{
             display: block;
@@ -74,7 +76,8 @@
             justify-content: center;
         }
         #rightHand{
-            grid-column: 3;
+            flex: 1;
+            margin-left: auto;
             text-align: right;
         }
     
@@ -82,23 +85,24 @@
     /* Main stuff */
     
     .content {
-        grid-row: 2 / 3;
-        grid-column: 1 / 4;
+        flex: 1 0 auto;
     } 
 
     main {
-        display: grid;
-        grid-template-columns:100px 1fr 1fr;
-        grid-template-rows: 1fr;
-        grid-column-gap: 30px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: stretch;
+        column-gap: 30px;
+        row-gap: 30px;
     }
     
     .pic{
-        width: 50%;
+        flex-shrink: 2;
     }
     
     article {
-        grid-column: 2;
+        flex-grow: 1;
     }
     
 
@@ -116,8 +120,7 @@
     footer{
     }
     .footer{
-        grid-row: 4;
-        grid-column: 1 / 4;
+        flex-shrink: 0;
         background-color: #222222;
         margin-left: -15px;
         margin-right: -15px;
