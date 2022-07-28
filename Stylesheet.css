@@ -22,7 +22,7 @@ html, body{
     /* Gets rid of old-fashioned underlining on links */
     a:link { 
         text-decoration: none;
-        color: aqua;
+        color: white;
     }
     a:visited { 
         text-decoration: none;
@@ -30,11 +30,12 @@ html, body{
     }
     a:hover { 
         text-decoration: none;
-        color: aqua;
+        color: white;
+        background-color: #666666;
     }
     a:active { 
         text-decoration: none;
-        color: aqua;
+        color: white;
     }
     
     /* Header stuff */
@@ -83,7 +84,10 @@ html, body{
     
     
     /* Main stuff */
-    
+    h3 {
+        background-color: #222222;
+    }    
+
     .content {
         flex: 1 0 auto;
     } 
@@ -94,21 +98,57 @@ html, body{
         justify-content: space-around;
         align-items: stretch;
         column-gap: 30px;
-        row-gap: 30px;
+        row-gap: 10px;
     }
     
     .pic{
         flex-shrink: 2;
+        max-height: 200px;
     }
     
     article {
         flex-grow: 1;
     }
     
+    .verticalListStretcher {
+        align-items: stretch;
+        display: flex;
+        flex-flow: column;
+        row-gap: 20px;
+    }
+    
+    .verticalList {
+        display: flex;
+        flex-flow: column;
+        justify-content: space-around;
+        justify-items: center;
+        align-items: center;
+    }
+    
+    .linkBoxLargeText {
+        font-size: xxx-large;
+    }
+    
+    .linkBox {
+        text-align: center;
+        margin: 5px 5px 5px 5px;
+        padding: 5px 20px 5px 20px;
+        background-color: #444444;
+        border: 5px solid #333333;
+        box-shadow: 10px 10px #222222;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    .icon {
+        height: 40px;
+        padding: 0 16px 0 0;
+        margin: auto;
+    }
 
     /* Format stuff */
     
-    .Emphasis {
+    .emphasis {
         background-color: #222222;
         font-family: monospace;
         font-size: x-large;
